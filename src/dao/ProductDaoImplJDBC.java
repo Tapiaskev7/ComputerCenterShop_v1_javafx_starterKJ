@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 import java.util.ArrayList;
+import java.sql.PreparedStatement;
 
 import model.Product;
 
@@ -24,7 +25,7 @@ public class ProductDaoImplJDBC implements ProductDao {
 
 		// TODO RA2-ISSUE-02: obrir la connexio amb DriverManager i guardar-la a conn.
 		// Pista: usa url, user i password, i comprova com es declara el connector al pom.xml.
-		throw pending("RA2-ISSUE-02 pendent: implementa la connexio JDBC amb DriverManager.");
+		conn = DriverManager.getConnection( DEFAULT_DB_URL, DEFAULT_USER, DEFAULT_PASSWORD);
 	}
 
 	@Override
@@ -55,6 +56,7 @@ public class ProductDaoImplJDBC implements ProductDao {
 
 	@Override
 	public int insertProduct(Product product) throws SQLException {
+		
 		// TODO RA2-ISSUE-04: inserir name, wholesaler_price, available i stock amb PreparedStatement.
 		throw pending("RA2-ISSUE-04 pendent: implementa insercio amb PreparedStatement.");
 	}
