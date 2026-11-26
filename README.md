@@ -95,7 +95,7 @@ Dupliqueu aquest bloc per a cada *issue* que completeu. Escriviu amb les vostres
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 ## Proves que hem de poder repetir
 
-### RA2-ISSUE-02 · [títol de l'*issue*]
+### RA2-ISSUE-02 · [Implementar connector, URL i connexio*]
 
 - Estat: **Comprovat**
 - Persona que l'ha iniciat: **[Jordan]**
@@ -134,7 +134,7 @@ Dupliqueu aquest bloc per a cada *issue* que completeu. Escriviu amb les vostres
 - Explicació individual: **[Al principi m'ha costat una mica entendre com funcionava PreparedStatement i com s'assignaven els paràmetres. Després de fer les proves, he entès com es guarda un producte a la base de dades.]**
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 
-### RA2-ISSUE-05 · [títol de l'*issue*]
+### RA2-ISSUE-05 · [Implementar actualitzacio d'estoc*]
 
 - Estat: **comprovat**
 - Persona que l'ha iniciat: **[Kevin]**
