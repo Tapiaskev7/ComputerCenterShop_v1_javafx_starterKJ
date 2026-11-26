@@ -47,9 +47,9 @@ Marqueu una tasca quan la prova i el rastre al repositori estiguin recollits. El
 
 ### M2 · Operacions relacionals principals
 
-- [ ] [RA2-ISSUE-04 · Inserció de dades](issues/RA2-ISSUE-04-inserir-producte-preparedstatement.md)
-- [ ] [RA2-ISSUE-05 · Actualització d'estoc](issues/RA2-ISSUE-05-actualitzar-estoc.md)
-- [ ] [RA2-ISSUE-06 · Eliminació controlada](issues/RA2-ISSUE-06-eliminar-producte-controlat.md)
+- [X] [RA2-ISSUE-04 · Inserció de dades](issues/RA2-ISSUE-04-inserir-producte-preparedstatement.md)
+- [X] [RA2-ISSUE-05 · Actualització d'estoc](issues/RA2-ISSUE-05-actualitzar-estoc.md)
+- [X] [RA2-ISSUE-06 · Eliminació controlada](issues/RA2-ISSUE-06-eliminar-producte-controlat.md)
 - [ ] [RA2-ISSUE-07 · Consultes i resultats](issues/RA2-ISSUE-07-consultar-inventari-resultset.md)
 
 ### M3 · Robustesa JDBC
@@ -97,28 +97,54 @@ Dupliqueu aquest bloc per a cada *issue* que completeu. Escriviu amb les vostres
 
 ### RA2-ISSUE-02 · [títol de l'*issue*]
 
-- Estat: **pendent | en curs | comprovat**
-- Persona que l'ha iniciat: **[nom]**
-- Problema inicial: **[què no funcionava o què faltava]**
-- Decisió aplicada: **[què heu decidit fer i per què]**
-- Canvis fets: **[fitxers o parts del projecte modificades]**
-- Prova realitzada: **[cas que heu provat i resultat observat]**
-- Evidència: **[enllaç a captura, registre, vídeo breu o apartat del repositori]**
+- Estat: **Comprovat**
+- Persona que l'ha iniciat: **[Jordan]**
+- Problema inicial: **[ Faltava implementar la connexió entre l'aplicació Java i la base de dades H2.]**
+- Decisió aplicada: **[Hem decidit utilitzar DriverManager amb les dades de connexió definides al projecte. També hem revisat que la dependència H2 estigui al pom.xml.]**
+- Canvis fets: **[ Hem completat el mètode connect() del fitxer ProductDaoImplJDBC.java.]**
+- Prova realitzada: **[Hem executat l'aplicació i hem comprovat que es connecta correctament a la base de dades.]**
+- Evidència: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/2#issuecomment-7017511416]**
+- *Commit* o *pull request*: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/3#issuecomment-7140957984]**
+- Explicació individual: **[Aquesta tasca no m'ha semblat gaire complicada. He après com es connecta una aplicació Java amb una base de dades H2 i la importància de tenir ben configurada la dependència al pom.xml.]**
+- Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
+
+### RA2-ISSUE-03 · [Implementar estructura relacional*]
+
+- Estat: **comprovat**
+- Persona que l'ha iniciat: **[Kevin]**
+- Problema inicial: **[ Faltava crear l'estructura de la base de dades per guardar els productes i els moviments de l'inventari.]**
+- Decisió aplicada: **[Hem decidit crear les taules products i inventory_history si no existeixen, relacionar-les mitjançant una clau forana i afegir productes inicials si l'inventari està buit.]**
+- Canvis fets: **[Hem completat el mètode initSchema() del fitxer ProductDaoImplJDBC.java, incloent-hi la creació de les taules, l'àlies d'alerta d'estoc i les dades inicials.]**
+- Prova realitzada: **[ Hem inicialitzat l'esquema i hem comprovat des del CMD que les taules existeixen i que es poden consultar els productes i l'historial.]**
+- Evidència: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/3#issuecomment-7140957984]**
 - *Commit* o *pull request*: **[enllaç o identificador]**
-- Explicació individual: **[què pot explicar cada integrant sobre aquesta tasca]**
+- Explicació individual: **[Aquesta tasca m'ha semblat una mica més complicada perquè calia entendre com es relacionaven les dues taules. He après com es crea l'estructura de la base de dades i per què s'utilitzen les claus foranes.]**
+- Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
+
+### RA2-ISSUE-04 · [Implementar insercio amb PreparedStatement*]
+
+- Estat: **comprovat**
+- Persona que l'ha iniciat: **[Jordan]**
+- Problema inicial: **[ Faltava implementar el mètode insertProduct() per guardar nous productes a la base de dades.]**
+- Decisió aplicada: **[Hem decidit utilitzar PreparedStatement per inserir el nom, el preu, la disponibilitat i l'estoc del producte mitjançant paràmetres.]**
+- Canvis fets: **[Hem completat el mètode insertProduct() del fitxer ProductDaoImplJDBC.java.]**
+- Prova realitzada: **[Hem afegit el producte Impressora HP des de JavaFX i l'aplicació ha mostrat un missatge confirmant la inserció. Posteriorment, hem comprovat els productes guardats mitjançant una consulta SQL.]**
+- Evidència: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/4#issuecomment-7197198858]**
+- *Commit* o *pull request*: **[enllaç o identificador]**
+- Explicació individual: **[Al principi m'ha costat una mica entendre com funcionava PreparedStatement i com s'assignaven els paràmetres. Després de fer les proves, he entès com es guarda un producte a la base de dades.]**
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 
 ### RA2-ISSUE-05 · [títol de l'*issue*]
 
-- Estat: **pendent | en curs | comprovat**
-- Persona que l'ha iniciat: **[nom]**
-- Problema inicial: **[què no funcionava o què faltava]**
-- Decisió aplicada: **[què heu decidit fer i per què]**
-- Canvis fets: **[fitxers o parts del projecte modificades]**
-- Prova realitzada: **[cas que heu provat i resultat observat]**
-- Evidència: **[enllaç a captura, registre, vídeo breu o apartat del repositori]**
+- Estat: **comprovat**
+- Persona que l'ha iniciat: **[Kevin]**
+- Problema inicial: **[ Faltava implementar el mètode updateStock() per modificar l'estoc i la disponibilitat dels productes.]**
+- Decisió aplicada: **[Hem decidit utilitzar PreparedStatement per actualitzar l'estoc del producte pel seu nom. Si l'estoc és superior a zero, el producte està disponible. Si és zero, deixa d'estar disponible.]**
+- Canvis fets: **[Hem completat el mètode updateStock() del fitxer ProductDaoImplJDBC.java.]**
+- Prova realitzada: **[ Hem preparat una prova per modificar l'estoc d'un producte i comprovar que la disponibilitat canvia quan l'estoc arriba a zero. Falta confirmar els resultats amb les consultes corresponents.]**
+- Evidència: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/5#issuecomment-7198543232]**
 - *Commit* o *pull request*: **[enllaç o identificador]**
-- Explicació individual: **[què pot explicar cada integrant sobre aquesta tasca]**
+- Explicació individual: **[Aquesta tasca m'ha semblat més fàcil perquè ja havia treballat amb PreparedStatement a la tasca anterior. He entès com modificar l'estoc d'un producte i controlar la seva disponibilitat segons les unitats que té.]**
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 
 
@@ -132,7 +158,7 @@ Dupliqueu aquest bloc per a cada *issue* que completeu. Escriviu amb les vostres
 - Prova realitzada: **[ Hem eliminat el producte Raton correctament. També hem afegit un registre de prova a l'historial de Teclado i hem intentat eliminar-lo, però l'aplicació ens ha mostrat un missatge d'error. Finalment, hem comprovat els resultats amb consultes SQL des del CMD.]**
 - Evidència: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/6#issuecomment-7199698911]**
 - *Commit* o *pull request*: **[enllaç o identificador]**
-- Explicació individual: **[què pot explicar cada integrant sobre aquesta tasca]**
+- Explicació individual: **[Aquesta tasca m'ha semblat una mica més complicada per la gestió de l'error quan un producte té historial associat. També he après a connectar-me a H2 des del CMD i comprovar directament si un producte s'ha eliminat o no.]**
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 
 
