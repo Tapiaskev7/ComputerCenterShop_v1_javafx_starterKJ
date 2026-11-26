@@ -95,6 +95,47 @@ Dupliqueu aquest bloc per a cada *issue* que completeu. Escriviu amb les vostres
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 ## Proves que hem de poder repetir
 
+### RA2-ISSUE-02 · [títol de l'*issue*]
+
+- Estat: **pendent | en curs | comprovat**
+- Persona que l'ha iniciat: **[nom]**
+- Problema inicial: **[què no funcionava o què faltava]**
+- Decisió aplicada: **[què heu decidit fer i per què]**
+- Canvis fets: **[fitxers o parts del projecte modificades]**
+- Prova realitzada: **[cas que heu provat i resultat observat]**
+- Evidència: **[enllaç a captura, registre, vídeo breu o apartat del repositori]**
+- *Commit* o *pull request*: **[enllaç o identificador]**
+- Explicació individual: **[què pot explicar cada integrant sobre aquesta tasca]**
+- Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
+
+### RA2-ISSUE-05 · [títol de l'*issue*]
+
+- Estat: **pendent | en curs | comprovat**
+- Persona que l'ha iniciat: **[nom]**
+- Problema inicial: **[què no funcionava o què faltava]**
+- Decisió aplicada: **[què heu decidit fer i per què]**
+- Canvis fets: **[fitxers o parts del projecte modificades]**
+- Prova realitzada: **[cas que heu provat i resultat observat]**
+- Evidència: **[enllaç a captura, registre, vídeo breu o apartat del repositori]**
+- *Commit* o *pull request*: **[enllaç o identificador]**
+- Explicació individual: **[què pot explicar cada integrant sobre aquesta tasca]**
+- Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
+
+
+### RA2-ISSUE-06 · [Implementar eliminacio controlada*]
+
+- Estat: **comprovat**
+- Persona que l'ha iniciat: **[Jordan]**
+- Problema inicial: **[Faltava implementar el mètode deleteProduct() per poder eliminar productes de la base de dades.]**
+- Decisió aplicada: **[Hem decidit utilitzar PreparedStatement per eliminar el producte pel seu nom i un try-catch per controlar l'error si té historial associat.]**
+- Canvis fets: **[Hem modificat el mètode deleteProduct() del fitxer ProductDaoImplJDBC.java.]**
+- Prova realitzada: **[ Hem eliminat el producte Raton correctament. També hem afegit un registre de prova a l'historial de Teclado i hem intentat eliminar-lo, però l'aplicació ens ha mostrat un missatge d'error. Finalment, hem comprovat els resultats amb consultes SQL des del CMD.]**
+- Evidència: **[https://github.com/Tapiaskev7/ComputerCenterShop_v1_javafx_starterKJ/issues/6#issuecomment-7199698911]**
+- *Commit* o *pull request*: **[enllaç o identificador]**
+- Explicació individual: **[què pot explicar cada integrant sobre aquesta tasca]**
+- Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
+
+
 | Cas que comprovem | Dades o condicions inicials | Resultat observat | Evidència |
 | --- | --- | --- | --- |
 | Arrencada del projecte | **[completeu]** | **[completeu]** | **[enllaç]** |
