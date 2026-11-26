@@ -132,7 +132,6 @@ public class ProductDaoImplJDBC implements ProductDao {
 		// TODO RA2-ISSUE-05: actualitzar stock i available segons newStock amb PreparedStatement.
 		String sql = "UPDATE products SET stock = ?, available = ? WHERE name = ?";
 		try (PreparedStatement pstmt = requireConnection().prepareStatement(sql)) {
-
 	        // asignar los parametros
 	        pstmt.setInt(1, newStock);
 	        pstmt.setBoolean(2, newStock > 0);
@@ -145,8 +144,21 @@ public class ProductDaoImplJDBC implements ProductDao {
 	@Override
 	public int deleteProduct(String name) throws SQLException {
 		// TODO RA2-ISSUE-06: eliminar per nom i comprovar files afectades.
-		throw pending("RA2-ISSUE-06 pendent: implementa eliminacio controlada.");
-	}
+		    String sql = "DELETE FROM products WHERE name = ?";
+
+		    try (PreparedStatement pstmt = requireConnection().prepareStatement(sql)) {
+		        pstmt.setString(1, name);
+		        return pstmt.executeUpdate();
+
+		    } catch (SQLException e) {
+		        // comprobar si el producto tiene historial asociado
+		        if ("23503".equals(e.getSQLState())) {
+		            throw new SQLException("No es pot eliminar el producte perquè té historial associat.", e);
+		        }
+
+		        throw e;
+		    }
+		}
 
 	@Override
 	public void registerStockChange(String name, int unitsToAdd) throws SQLException {
