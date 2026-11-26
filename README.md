@@ -148,7 +148,7 @@ Dupliqueu aquest bloc per a cada *issue* que completeu. Escriviu amb les vostres
 - Ús d'IA, si n'hi ha hagut: **[consulta feta, ajuda rebuda i comprovació pròpia]**
 
 
-### RA2-ISSUE-06 · [Implementar eliminacio controlada*]
+### RA2-ISSUE-06 · [Implementar eliminacio Controlada*]
 
 - Estat: **comprovat**
 - Persona que l'ha iniciat: **[Jordan]**
